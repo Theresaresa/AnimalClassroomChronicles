@@ -1,0 +1,4 @@
+repository "AnimalClassroomChronicles/AnimalClassroomChronicles@9072372014082@cloud"
+  path "/"
+    br "/main"
+    co "/main"
