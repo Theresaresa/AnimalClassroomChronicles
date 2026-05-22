@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LunchSurveyManager : MonoBehaviour
 {
@@ -9,7 +11,7 @@ public class LunchSurveyManager : MonoBehaviour
     public TextMeshProUGUI progressText;
 
     public GameObject surveyPanel;
-    public GameObject storageRoomPanel;
+    public Button goToStorageButton;
 
     private int currentQuestion = 0;
 
@@ -27,9 +29,9 @@ public class LunchSurveyManager : MonoBehaviour
     {
         ShowQuestion();
 
-        if (storageRoomPanel != null)
+        if (goToStorageButton != null)
         {
-            storageRoomPanel.SetActive(false);
+            goToStorageButton.gameObject.SetActive(false);
         }
     }
 
@@ -53,7 +55,21 @@ public class LunchSurveyManager : MonoBehaviour
 
         string cleanedAnswer = CleanAnswer(originalAnswer);
 
-        if (cleanedAnswer == "yes i do" || cleanedAnswer == "no i dont")
+        if (cleanedAnswer == "no i dont" &&
+            !originalAnswer.Contains("don't") &&
+            !originalAnswer.Contains("don’t"))
+        {
+            feedbackText.text = "Check your spelling: write \"don't\" with an apostrophe.";
+            return;
+        }
+
+        bool validAnswer =
+            cleanedAnswer == "yes i do" ||
+            cleanedAnswer == "no i do not" ||
+            originalAnswer == "No I don't" ||
+            originalAnswer == "No I don’t";
+
+        if (validAnswer)
         {
             if (!char.IsUpper(originalAnswer[0]))
             {
@@ -77,24 +93,23 @@ public class LunchSurveyManager : MonoBehaviour
             }
             else
             {
-                feedbackText.text = "Thank you for helping Mrs Ladybug!";
-                Invoke("OpenStorageRoom", 2.0f);
+                feedbackText.text = "Great job!\nLet's investigate the storage room.";
+
+                if (goToStorageButton != null)
+                {
+                    goToStorageButton.gameObject.SetActive(true);
+                }
             }
         }
         else
         {
-            feedbackText.text = "Check your spelling carefully. Use: Yes I do / No I don't.";
+            feedbackText.text = "Check your spelling carefully. Use: Yes I do / No I don't / No I do not.";
         }
     }
 
-    void OpenStorageRoom()
+    public void GoToStorageRoom()
     {
-        surveyPanel.SetActive(false);
-
-        if (storageRoomPanel != null)
-        {
-            storageRoomPanel.SetActive(true);
-        }
+        SceneManager.LoadScene("StorageRoomScene");
     }
 
     string CleanAnswer(string answer)
