@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6715a57296cda434cb7dada5d2ac1a1b
+guid: 6b8e9be3c41875744b8be247700d2b45
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6081306686616141883
-    second: clothesshoprobbed_0
+      213: 1800297665650398098
+    second: happyhorse_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: clothesshoprobbed_0
+      name: happyhorse_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1672
-        height: 941
+        width: 1024
+        height: 1532
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b3086f91634256450800000000000000
-      internalID: 6081306686616141883
+      spriteID: 2939e034031fbf810800000000000000
+      internalID: 1800297665650398098
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      clothesshoprobbed_0: 6081306686616141883
+      happyhorse_0: 1800297665650398098
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
