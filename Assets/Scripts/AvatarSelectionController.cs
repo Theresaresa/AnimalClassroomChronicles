@@ -1,29 +1,42 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; //nötig für das Laden von Szenen
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class AvatarSelectionController : MonoBehaviour
 {
     public Button continueButton;
+    public TextMeshProUGUI selectedAvatarText;
 
-    private string selectAvatar = "";
+    private string selectedAvatar = "";
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        continueButton.interactable = false; // Continue-Button zu Beginn deaktivieren
+        continueButton.interactable = false;
+
+        if (selectedAvatarText != null)
+        {
+            selectedAvatarText.text = "No avatar selected yet.";
+        }
     }
 
     public void SelectAvatar(string avatarName)
     {
-        selectAvatar = avatarName;
-        Debug.Log("Gewählter Avatar: " + selectAvatar);
+        selectedAvatar = avatarName;
 
-        PlayerPrefs.SetString("SelectedAvatar", selectAvatar); // Gewählten Avatar in PlayerPrefs speichern
-        continueButton.interactable = true; // Continue-Button aktivieren, wenn ein Avatar ausgewählt wurde
+        Debug.Log("Selected avatar: " + selectedAvatar);
+
+        PlayerPrefs.SetString("SelectedAvatar", selectedAvatar);
+        PlayerPrefs.Save();
+
+        continueButton.interactable = true;
+
+        if (selectedAvatarText != null)
+        {
+            selectedAvatarText.text = "Selected avatar: " + selectedAvatar;
+        }
     }
-    // Update is called once per frame
+
     public void ContinueToClassroom()
     {
         SceneManager.LoadScene("ClassroomScene");
