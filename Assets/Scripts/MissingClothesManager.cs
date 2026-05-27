@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 
+
+
 public class MissingClothesManager : MonoBehaviour
 {
     public TMP_InputField input1;
@@ -8,6 +10,9 @@ public class MissingClothesManager : MonoBehaviour
     public TMP_InputField input3;
 
     public TextMeshProUGUI feedbackText;
+
+    public GameObject missingClothesPanel;
+public GameObject listeningTaskPanel;
 
     private string[] correctAnswers =
     {
@@ -41,6 +46,7 @@ public class MissingClothesManager : MonoBehaviour
         {
             feedbackText.text =
                 "Excellent detective work! Mr Whinnyham remembers the missing clothes now.";
+                Invoke("OpenListeningTask", 2f);
         }
         else
         {
@@ -80,4 +86,10 @@ public class MissingClothesManager : MonoBehaviour
 
         return answer;
     }
+
+    void OpenListeningTask()
+{
+    missingClothesPanel.SetActive(false);
+    listeningTaskPanel.SetActive(true);
+}
 }
