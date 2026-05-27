@@ -135,6 +135,9 @@ public class ClassroomWritingTask : MonoBehaviour
 }
     public void GoToCafeteria()
 {
+    PlayerPrefs.SetString("LastScene", "CafeteriaScene");
+    PlayerPrefs.Save();
+    
     SceneManager.LoadScene("CafeteriaScene");
 }
     

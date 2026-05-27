@@ -38,7 +38,10 @@ public class AvatarSelectionController : MonoBehaviour
     }
 
     public void ContinueToClassroom()
-    {
-        SceneManager.LoadScene("ClassroomScene");
-    }
+{
+    PlayerPrefs.SetString("LastScene", "ClassroomScene");
+    PlayerPrefs.Save();
+
+    SceneManager.LoadScene("ClassroomScene");
+}
 }

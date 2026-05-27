@@ -87,8 +87,11 @@ public class EscapeCodeManager : MonoBehaviour
         return answer;
     }
 
-    public void GoToCostumeShop()
+public void GoToCostumeShop()
 {
+    PlayerPrefs.SetString("LastScene", "CostumeShopScene");
+    PlayerPrefs.Save();
+
     SceneManager.LoadScene("CostumeShopScene");
 }
 }

@@ -107,10 +107,13 @@ public class LunchSurveyManager : MonoBehaviour
         }
     }
 
-    public void GoToStorageRoom()
-    {
-        SceneManager.LoadScene("StorageRoomScene");
-    }
+   public void GoToStorageRoom()
+{
+    PlayerPrefs.SetString("LastScene", "StorageRoomScene");
+    PlayerPrefs.Save();
+
+    SceneManager.LoadScene("StorageRoomScene");
+}
 
     string CleanAnswer(string answer)
     {
