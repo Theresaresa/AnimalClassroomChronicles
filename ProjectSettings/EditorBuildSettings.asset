@@ -14,9 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ClassroomScene.unity
     guid: 44465bec507d5d64ebd2eeb5c81c9181
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/CafeteriaScene.unity
     guid: eaea1dd7210b1d1479337e782e222463
@@ -29,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CostumeShopScene.unity
     guid: 124d61226b8542345b51d33eaad6ebb4
+  - enabled: 1
+    path: Assets/Scenes/Chapter3EndingScene.unity
+    guid: 3f5ace0c523903e4f96743cdb0abc230
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
