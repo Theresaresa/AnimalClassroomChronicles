@@ -29,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter3EndingScene.unity
     guid: 3f5ace0c523903e4f96743cdb0abc230
+  - enabled: 1
+    path: Assets/Scenes/HarborScene.unity
+    guid: cf5c8abfaca8bf943a88fe8f157c7e18
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

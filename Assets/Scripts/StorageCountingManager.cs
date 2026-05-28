@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class StorageCountingManager : MonoBehaviour
 {
@@ -83,6 +84,7 @@ public class StorageCountingManager : MonoBehaviour
             else
             {
                 feedbackText.text = "Excellent work! You counted all the food.";
+                Invoke("GoToLockedStorage", 2f);
             }
         }
         else
@@ -100,4 +102,12 @@ public class StorageCountingManager : MonoBehaviour
         answer = answer.Replace("?", "");
         return answer;
     }
+
+    void GoToLockedStorage()
+{
+    PlayerPrefs.SetString("LastScene", "LockedStorageScene");
+    PlayerPrefs.Save();
+
+    SceneManager.LoadScene("LockedStorageScene");
+}
 }

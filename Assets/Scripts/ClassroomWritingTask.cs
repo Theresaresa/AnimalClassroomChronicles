@@ -121,6 +121,7 @@ public class ClassroomWritingTask : MonoBehaviour
             "Correct! Someone in the cafeteria may know more.";
 
         goToCafeteriaButton.gameObject.SetActive(true);
+        goToCafeteriaButton.interactable = true;
     }
     else
     {

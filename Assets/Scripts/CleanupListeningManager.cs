@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CleanupListeningManager : MonoBehaviour
 {
@@ -57,6 +58,7 @@ public class CleanupListeningManager : MonoBehaviour
         if (q1Correct && q2Correct && q3Correct)
         {
             feedbackText.text = "Excellent listening! You helped Mr Whinnyham clean up the shop.";
+            Invoke("GoToEndingScene", 2f);
         }
         else
         {
@@ -77,4 +79,13 @@ public class CleanupListeningManager : MonoBehaviour
 
         return answer;
     }
+
+void GoToEndingScene()
+{
+    PlayerPrefs.SetString("LastScene", "Chapter3EndingScene");
+    PlayerPrefs.Save();
+
+    SceneManager.LoadScene("Chapter3EndingScene");
+}
+
 }
