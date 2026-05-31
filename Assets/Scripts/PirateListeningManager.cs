@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PirateListeningManager : MonoBehaviour
 {
@@ -7,9 +8,6 @@ public class PirateListeningManager : MonoBehaviour
 
     public TMP_InputField pirateNameInput;
     public TextMeshProUGUI feedbackText;
-
-    public GameObject listeningMissionPanel;
-    public GameObject readingMissionPanel;
 
     public void PlayAudio()
     {
@@ -30,8 +28,7 @@ public class PirateListeningManager : MonoBehaviour
         if (answer == "bane")
         {
             feedbackText.text = "Excellent detective work! You found the correct pirate.";
-
-            Invoke("OpenReadingMission", 2f);
+            Invoke("GoToBaneScene", 2f);
         }
         else
         {
@@ -39,13 +36,11 @@ public class PirateListeningManager : MonoBehaviour
         }
     }
 
-    void OpenReadingMission()
+    void GoToBaneScene()
     {
-        listeningMissionPanel.SetActive(false);
+        PlayerPrefs.SetString("LastScene", "HarborBaneScene");
+        PlayerPrefs.Save();
 
-        if (readingMissionPanel != null)
-        {
-            readingMissionPanel.SetActive(true);
-        }
+        SceneManager.LoadScene("HarborBaneScene");
     }
 }
