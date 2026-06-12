@@ -5,23 +5,22 @@ using UnityEngine.UI;
 public class MainMenuController : MonoBehaviour
 {
     public Button continueButton;
+    public Button chapterSelectButton;
 
     void Start()
     {
-        if (!PlayerPrefs.HasKey("LastScene"))
-        {
-            continueButton.interactable = false;
-        }
-        else
-        {
-            continueButton.interactable = true;
-        }
+        bool hasSaveGame = PlayerPrefs.HasKey("LastScene");
+
+        continueButton.interactable = hasSaveGame;
+        chapterSelectButton.interactable = true;
     }
 
     public void StartNewGame()
     {
-        PlayerPrefs.DeleteKey("LastScene");
-        PlayerPrefs.DeleteKey("SelectedAvatar");
+        PlayerPrefs.DeleteAll();
+
+        PlayerPrefs.SetInt("UnlockedChapter", 1);
+        PlayerPrefs.SetString("LastScene", "AvatarSelection");
         PlayerPrefs.Save();
 
         SceneManager.LoadScene("AvatarSelection");
@@ -31,6 +30,17 @@ public class MainMenuController : MonoBehaviour
     {
         string lastScene = PlayerPrefs.GetString("LastScene", "AvatarSelection");
         SceneManager.LoadScene(lastScene);
+    }
+
+    public void OpenChapterSelect()
+    {
+        if (!PlayerPrefs.HasKey("UnlockedChapter"))
+        {
+            PlayerPrefs.SetInt("UnlockedChapter", 1);
+            PlayerPrefs.Save();
+        }
+
+        SceneManager.LoadScene("ChapterSelectScene");
     }
 
     public void QuitGame()
