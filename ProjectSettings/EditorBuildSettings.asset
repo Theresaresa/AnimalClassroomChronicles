@@ -41,5 +41,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChapterSelectScene.unity
     guid: 60f7c32e94a23574fa840ca60a3bdbf2
+  - enabled: 1
+    path: Assets/Scenes/SecretRoomScene.unity
+    guid: 3a80ea1f8c1f05b468a99309e347ada5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

@@ -35,7 +35,7 @@ public class DetectiveNotesManager : MonoBehaviour
         if (allCorrect)
         {
             feedbackText.text =
-                "Excellent detective work! The first letters reveal a hidden clue: S E C R E T.";
+                "Excellent detective work! The notes helped you think clearly. Have a closer look at the bookshelves.";
 
             Invoke("OpenSecretWordPanel", 2f);
         }
