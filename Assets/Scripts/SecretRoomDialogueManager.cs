@@ -20,8 +20,6 @@ public class SecretRoomDialogueManager : MonoBehaviour
 
             "I knew you would investigate carefully.",
 
-            "You solved every mystery I gave you.",
-
             "Now tell me... what did you discover?",
 
             "Who do you think stole the Golden Speaking Ball?"
