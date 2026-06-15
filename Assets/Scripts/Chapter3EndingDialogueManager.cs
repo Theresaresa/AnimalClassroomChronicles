@@ -49,8 +49,9 @@ public class Chapter3EndingDialogueManager : MonoBehaviour
     void GoToHarbor()
     {
         PlayerPrefs.SetString("LastScene", "HarborScene");
-        PlayerPrefs.Save();
+PlayerPrefs.SetInt("UnlockedChapter", Mathf.Max(PlayerPrefs.GetInt("UnlockedChapter", 1), 4));
+PlayerPrefs.Save();
 
-        SceneManager.LoadScene("HarborScene");
+SceneManager.LoadScene("HarborScene");
     }
 }

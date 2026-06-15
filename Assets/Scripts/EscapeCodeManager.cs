@@ -90,8 +90,9 @@ public class EscapeCodeManager : MonoBehaviour
 public void GoToCostumeShop()
 {
     PlayerPrefs.SetString("LastScene", "CostumeShopScene");
-    PlayerPrefs.Save();
+PlayerPrefs.SetInt("UnlockedChapter", Mathf.Max(PlayerPrefs.GetInt("UnlockedChapter", 1), 3));
+PlayerPrefs.Save();
 
-    SceneManager.LoadScene("CostumeShopScene");
+SceneManager.LoadScene("CostumeShopScene");
 }
 }

@@ -134,11 +134,12 @@ public class ClassroomWritingTask : MonoBehaviour
 {
     hintText.gameObject.SetActive(true);
 }
-    public void GoToCafeteria()
+public void GoToCafeteria()
 {
     PlayerPrefs.SetString("LastScene", "CafeteriaScene");
+    PlayerPrefs.SetInt("UnlockedChapter", Mathf.Max(PlayerPrefs.GetInt("UnlockedChapter", 1), 2));
     PlayerPrefs.Save();
-    
+
     SceneManager.LoadScene("CafeteriaScene");
 }
     
