@@ -32,6 +32,7 @@ public class CleanupListeningManager : MonoBehaviour
 
         bool q1Correct =
             answer1 == "his favourite cape is purple" ||
+            answer1 == "purple" ||
             answer1 == "his favorite cape is purple" ||
             answer1 == "the purple cape is his favourite" ||
             answer1 == "the purple cape is his favorite" ||
@@ -41,6 +42,10 @@ public class CleanupListeningManager : MonoBehaviour
         bool q2Correct =
             answer2 == "the shirts are white pink and light blue" ||
             answer2 == "they are white pink and light blue" ||
+            answer2 == "white pink and blue" ||
+            answer2 == "white pink blue" ||
+            answer2 == "blue white pink " ||
+             answer2 == "white blue pink " ||
             answer2 == "white pink and light blue" ||
             answer2 == "white light blue and pink" ||
             answer2 == "they are white light blue and pink" ||
