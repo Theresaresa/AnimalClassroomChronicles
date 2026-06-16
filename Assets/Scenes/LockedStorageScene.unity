@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Go to costume shop
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &98915899
@@ -315,8 +315,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Unlock door
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -427,7 +427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -101, y: -117}
+  m_AnchoredPosition: {x: -101, y: -184}
   m_SizeDelta: {x: 800, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &443181155
@@ -452,8 +452,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -619,7 +619,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -150}
-  m_SizeDelta: {x: 1200, y: 330}
+  m_SizeDelta: {x: 1200, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &620209731
 MonoBehaviour:
@@ -693,7 +693,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 117}
+  m_AnchoredPosition: {x: 0, y: 186}
   m_SizeDelta: {x: 1000, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &644581133
@@ -718,15 +718,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: The door is locked!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283539679
+  m_fontColor: {r: 0.8745099, g: 0.627451, b: 0.31764707, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -885,7 +885,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -185}
-  m_SizeDelta: {x: 320, y: 60}
+  m_SizeDelta: {x: 400, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &862737379
 MonoBehaviour:
@@ -963,8 +963,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 6700916742771646357, guid: d76f549b5e0313f489d0f19c1098612a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1017,8 +1017,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 310, y: -45}
-  m_SizeDelta: {x: 250, y: 60}
+  m_AnchoredPosition: {x: 310, y: -66}
+  m_SizeDelta: {x: 300, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &927630285
 MonoBehaviour:
@@ -1096,8 +1096,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 6700916742771646357, guid: d76f549b5e0313f489d0f19c1098612a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1255,7 +1255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -225, y: -84}
+  m_AnchoredPosition: {x: -225, y: -175}
   m_SizeDelta: {x: 550, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1345757839
@@ -2028,11 +2028,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7071189531742578432, guid: 0cfd57444cba5f74598f7dfae0462670, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 180
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 7071189531742578432, guid: 0cfd57444cba5f74598f7dfae0462670, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7071189531742578432, guid: 0cfd57444cba5f74598f7dfae0462670, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2082,6 +2082,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9093930101702124423, guid: 0cfd57444cba5f74598f7dfae0462670, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
+    - target: {fileID: 9093930101702124423, guid: 0cfd57444cba5f74598f7dfae0462670, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
+    - target: {fileID: 9093930101702124423, guid: 0cfd57444cba5f74598f7dfae0462670, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2127,7 +2139,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 41}
+  m_AnchoredPosition: {x: 0, y: 106}
   m_SizeDelta: {x: 1000, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1792380280
@@ -2153,8 +2165,8 @@ MonoBehaviour:
   m_text: Oh no! The storage room door closed behind you. Enter the secret code in
     words to escape.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2265,7 +2277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 20}
+  m_AnchoredPosition: {x: 0, y: 22}
   m_SizeDelta: {x: 800, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1795014944
@@ -2298,8 +2310,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: There are 35 apples.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

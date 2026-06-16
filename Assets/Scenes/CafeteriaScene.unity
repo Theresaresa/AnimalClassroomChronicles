@@ -179,7 +179,7 @@ MonoBehaviour:
   m_text: Check answer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -367,7 +367,7 @@ MonoBehaviour:
     like apples?\r\n\u2192 Yes, I do.\nOR: \r\n\u2192 No, I don't. / No. I do not."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1166,7 +1166,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -407}
-  m_SizeDelta: {x: 320, y: 70}
+  m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &433557932
 MonoBehaviour:
@@ -1189,11 +1189,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6666667, g: 0.5294118, b: 0.37254903, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1244,8 +1244,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 6700916742771646357, guid: d76f549b5e0313f489d0f19c1098612a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1299,7 +1299,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 571, y: -45}
-  m_SizeDelta: {x: 180, y: 55}
+  m_SizeDelta: {x: 180, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &509102780
 MonoBehaviour:
@@ -1377,8 +1377,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 6700916742771646357, guid: d76f549b5e0313f489d0f19c1098612a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1456,7 +1456,7 @@ MonoBehaviour:
   m_text: Lunch Lady Survey
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3feb3359e1713e54aa388bc3b337c5ac, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -8178923282628230140, guid: 3feb3359e1713e54aa388bc3b337c5ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1673,11 +1673,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7071189531742578432, guid: 0cfd57444cba5f74598f7dfae0462670, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 180
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 7071189531742578432, guid: 0cfd57444cba5f74598f7dfae0462670, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7071189531742578432, guid: 0cfd57444cba5f74598f7dfae0462670, type: 3}
       propertyPath: m_LocalScale.x
@@ -2210,7 +2210,7 @@ MonoBehaviour:
   m_text: Question 1 / 6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2420,8 +2420,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278743750
+  m_fontColor: {r: 0.77647066, g: 0.44705886, b: 0.03137255, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2528,7 +2528,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -120}
-  m_SizeDelta: {x: 260, y: 60}
+  m_SizeDelta: {x: 300, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1296977229
 MonoBehaviour:
@@ -2606,8 +2606,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 6700916742771646357, guid: d76f549b5e0313f489d0f19c1098612a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2693,7 +2693,7 @@ MonoBehaviour:
   m_text: Do you like pizza?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3159,14 +3159,14 @@ MonoBehaviour:
   m_text: Go to storage room
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4291685375
-  m_fontColor: {r: 1, g: 0.9215687, b: 0.8039216, a: 1}
+    rgba: 4281874488
+  m_fontColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3225,7 +3225,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1699767287
@@ -3376,17 +3376,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279834997
-  m_fontColor: {r: 0.45911938, g: 0.09962018, b: 0.09962018, a: 1}
+    rgba: 4281292023
+  m_fontColor: {r: 0.9686275, g: 0.32941177, b: 0.18431373, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3445,7 +3445,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2088385543
