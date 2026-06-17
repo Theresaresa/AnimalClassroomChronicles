@@ -7,7 +7,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
 
     public GameObject dialoguePanel;
-    public GameObject investigationPanel;
+    public GameObject goldenBallInfoPanel;
 
     private string[] dialogueLines;
     private int currentLine = 0;
@@ -18,8 +18,8 @@ public class DialogueManager : MonoBehaviour
         {
             "Oh no! Something terrible has happened in our classroom.",
             "The Golden Speaking Ball is missing.",
-            "It was last seen here before the lesson started.",
-            "You are our detective student, and I need your help.",
+            "It was last seen at school before the lesson started.",
+            "You are one of our best detective students. I need your help.",
             "Please investigate the classroom and look for the first clue."
         };
 
@@ -47,10 +47,10 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("Dialogue finished");
 
             if (dialoguePanel != null)
-                dialoguePanel.SetActive(false);
+    dialoguePanel.SetActive(false);
 
-            if (investigationPanel != null)
-                investigationPanel.SetActive(true);
+if (goldenBallInfoPanel != null)
+    goldenBallInfoPanel.SetActive(true);
         }
     }
 }

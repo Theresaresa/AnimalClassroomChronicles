@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class ClassroomWritingTask : MonoBehaviour
 {
+    [Header("Golden Ball Grammar Task")]
+    public GameObject goldenBallInfoPanel;
+    public TMP_InputField correctionInput1;
+    public TMP_InputField correctionInput2;
+    public TMP_InputField correctionInput3;
+    public TMP_InputField correctionInput4;
+    public TextMeshProUGUI goldenBallFeedbackText;
+
     [Header("Investigation Task")]
     public TMP_InputField sentence1;
     public TMP_InputField sentence2;
@@ -16,6 +24,7 @@ public class ClassroomWritingTask : MonoBehaviour
     public Button continueButton;
 
     [Header("Panels")]
+    public GameObject dialoguePanel;
     public GameObject investigationPanel;
     public GameObject wordSearchPanel;
 
@@ -30,15 +39,62 @@ public class ClassroomWritingTask : MonoBehaviour
         continueButton.interactable = false;
         goToCafeteriaButton.interactable = false;
 
+        if (dialoguePanel != null)
+            dialoguePanel.SetActive(true);
+
+        if (goldenBallInfoPanel != null)
+            goldenBallInfoPanel.SetActive(false);
+
+        if (investigationPanel != null)
+            investigationPanel.SetActive(false);
+
         if (wordSearchPanel != null)
-        {
             wordSearchPanel.SetActive(false);
-        }
 
         if (hintText != null)
-        {
             hintText.SetActive(false);
+    }
+
+    public void OpenGoldenBallInfoPanel()
+    {
+        if (dialoguePanel != null)
+            dialoguePanel.SetActive(false);
+
+        if (goldenBallInfoPanel != null)
+            goldenBallInfoPanel.SetActive(true);
+    }
+
+    public void CheckGoldenBallInfo()
+    {
+        string answer1 = CleanAnswer(correctionInput1.text);
+        string answer2 = CleanAnswer(correctionInput2.text);
+        string answer3 = CleanAnswer(correctionInput3.text);
+        string answer4 = CleanAnswer(correctionInput4.text);
+
+        bool allCorrect =
+            answer1 == "it speaks and answers questions" &&
+            answer2 == "the ball has magical powers" &&
+            answer3 == "students use the ball to learn" &&
+            answer4 == "teachers can move the ball";
+
+        if (allCorrect)
+        {
+            goldenBallFeedbackText.text =
+                "Excellent detective work! You now understand the most important facts about the Golden Speaking Ball.";
+
+            Invoke("OpenInvestigationPanel", 2f);
         }
+        else
+        {
+            goldenBallFeedbackText.text =
+                "Some sentences are not correct yet. Rewrite the full sentences and check the grammar carefully.";
+        }
+    }
+
+    void OpenInvestigationPanel()
+    {
+        goldenBallInfoPanel.SetActive(false);
+        investigationPanel.SetActive(true);
     }
 
     public void CheckAnswers()
@@ -74,33 +130,20 @@ public class ClassroomWritingTask : MonoBehaviour
 
         string[] classroomWords =
         {
-            "desk", "desks",
-            "chair", "chairs",
-            "board",
-            "book", "books",
-            "clock",
-            "window", "windows",
-            "door", "doors",
-            "pencil", "pencils",
-            "table", "tables",
-            "notebook", "notebooks",
-            "computer", "computers",
-            "speaker", "speakers",
-            "sound system"
+            "desk", "desks", "chair", "chairs", "board",
+            "book", "books", "clock", "window", "windows",
+            "door", "doors", "pencil", "pencils", "table", "tables",
+            "notebook", "notebooks", "computer", "computers",
+            "speaker", "speakers", "sound system"
         };
-
-        bool hasClassroomWord = false;
 
         foreach (string word in classroomWords)
         {
             if (sentence.Contains(word))
-            {
-                hasClassroomWord = true;
-                break;
-            }
+                return startsCorrectly;
         }
 
-        return startsCorrectly && hasClassroomWord;
+        return false;
     }
 
     public void ContinueInvestigation()
@@ -110,37 +153,54 @@ public class ClassroomWritingTask : MonoBehaviour
     }
 
     public void CheckWordSearchAnswer()
-{
-    wordSearchFeedbackText.gameObject.SetActive(true);
-
-    string answer = wordSearchInputField.text.ToLower().Trim();
-
-    if (answer == "cafeteria")
     {
-        wordSearchFeedbackText.text =
-            "Correct! Someone in the cafeteria may know more.";
+        wordSearchFeedbackText.gameObject.SetActive(true);
 
-        goToCafeteriaButton.gameObject.SetActive(true);
-        goToCafeteriaButton.interactable = true;
+        string answer = wordSearchInputField.text.ToLower().Trim();
+
+        if (answer == "cafeteria")
+        {
+            wordSearchFeedbackText.text =
+                "Correct! Someone in the cafeteria may know more.";
+
+            goToCafeteriaButton.gameObject.SetActive(true);
+            goToCafeteriaButton.interactable = true;
+        }
+        else
+        {
+            wordSearchFeedbackText.text =
+                "Try again. Look carefully in the word search.";
+        }
     }
-    else
-    {
-        wordSearchFeedbackText.text =
-            "Try again. Look carefully in the word search.";
-    }
-}
 
     public void ShowHint()
-{
-    hintText.gameObject.SetActive(true);
-}
-public void GoToCafeteria()
-{
-    PlayerPrefs.SetString("LastScene", "CafeteriaScene");
-    PlayerPrefs.SetInt("UnlockedChapter", Mathf.Max(PlayerPrefs.GetInt("UnlockedChapter", 1), 2));
-    PlayerPrefs.Save();
+    {
+        hintText.gameObject.SetActive(true);
+    }
 
-    SceneManager.LoadScene("CafeteriaScene");
-}
-    
+    public void GoToCafeteria()
+    {
+        PlayerPrefs.SetString("LastScene", "CafeteriaScene");
+        PlayerPrefs.SetInt("UnlockedChapter", Mathf.Max(PlayerPrefs.GetInt("UnlockedChapter", 1), 2));
+        PlayerPrefs.Save();
+
+        SceneManager.LoadScene("CafeteriaScene");
+    }
+
+    string CleanAnswer(string answer)
+    {
+        answer = answer.ToLower().Trim();
+
+        answer = answer.Replace(".", "");
+        answer = answer.Replace(",", "");
+        answer = answer.Replace("!", "");
+        answer = answer.Replace("?", "");
+
+        while (answer.Contains("  "))
+        {
+            answer = answer.Replace("  ", " ");
+        }
+
+        return answer;
+    }
 }
