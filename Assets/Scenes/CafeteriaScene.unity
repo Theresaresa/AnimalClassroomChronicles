@@ -316,7 +316,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2118384658778914729, guid: f9b38eaee0c970a4a923fa01b2ea6562, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -489
+      value: -542
       objectReference: {fileID: 0}
     - target: {fileID: 2402755648458898102, guid: f9b38eaee0c970a4a923fa01b2ea6562, type: 3}
       propertyPath: helpButton
@@ -352,7 +352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004771345411248513, guid: f9b38eaee0c970a4a923fa01b2ea6562, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1100
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 4004771345411248513, guid: f9b38eaee0c970a4a923fa01b2ea6562, type: 3}
       propertyPath: m_LocalPosition.x
@@ -450,47 +450,46 @@ PrefabInstance:
         Remember: In this task, use SHORT answers
         only.
 
-        
+
 
         Word Help
 
-        
 
-        lunch = food you
-        eat in the middle of the day
 
-        survey = a set of questions used to
-        collect people''s opinions
+        lunch = food you eat in the middle
+        of the day
 
-        remember = to keep information in your
-        mind
+        survey = a set of questions used to collect people''s
+        opinions
 
-        rushing through = doing something very quickly without thinking
-        carefully
+        remember = to keep information in your mind
 
-        wear = to have clothes on your body
+        rushing
+        through = doing something very quickly without thinking carefully
 
-        coat = a
-        warm piece of clothing worn over other clothes
+        wear
+        = to have clothes on your body
 
-        pizza = a flat baked
-        food with cheese and toppings
+        coat = a warm piece of clothing worn
+        over other clothes
 
-        soup = a liquid food usually eaten
-        with a spoon
+        pizza = a flat baked food with cheese and toppings
 
-        spinach = a green leafy vegetable
+        soup
+        = a liquid food usually eaten with a spoon
 
-        burger =
-        a sandwich with a meat or vegetable patty inside a bun
+        spinach = a green leafy
+        vegetable
 
-        banana =
-        a long yellow fruit
+        burger = a sandwich with a meat or vegetable patty inside
+        a bun
 
-        chocolate = a sweet food made from cocoa
+        banana = a long yellow fruit
 
-        like
-        = to enjoy something or think it is good
+        chocolate = a sweet
+        food made from cocoa
+
+        like = to enjoy something or think it is good
 
 '
       objectReference: {fileID: 0}
@@ -512,7 +511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8659312915724697159, guid: f9b38eaee0c970a4a923fa01b2ea6562, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 337
+      value: 384
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

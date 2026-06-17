@@ -57,7 +57,7 @@ public class EscapeCodeManager : MonoBehaviour
             }
             else
             {
-                feedbackText.text = "Great! The door unlocked. Ms Ladybug told you to go to Mr Whinnyham's shop and to bring him some food. He looked upset today. Maybe he knows something.";
+                feedbackText.text = "Great! The door unlocked. Ms Ladybug remembers she saw Mr Whinnyham. He was upset. She tells you to go to his shop and to bring him some food. Maybe he knows something.";
                 goToCostumeShopButton.gameObject.SetActive(true);
             }
         }
