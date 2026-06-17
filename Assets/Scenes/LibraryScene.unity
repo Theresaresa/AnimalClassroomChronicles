@@ -8217,6 +8217,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081900800}
   m_CullTransparentMesh: 1
+--- !u!1 &1086710698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1086710700}
+  - component: {fileID: 1086710699}
+  m_Layer: 0
+  m_Name: ReturnToMainMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1086710699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086710698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b724e58970ece45a142d9b334448c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReturnToMainMenu
+--- !u!4 &1086710700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086710698}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 545.1368, y: 414.57428, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1108142421
 GameObject:
   m_ObjectHideFlags: 0
@@ -12168,6 +12212,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenuButton
       objectReference: {fileID: 0}
+    - target: {fileID: 6129801868746719810, guid: 0cfd57444cba5f74598f7dfae0462670, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1086710699}
+    - target: {fileID: 6129801868746719810, guid: 0cfd57444cba5f74598f7dfae0462670, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToMainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 7071189531742578432, guid: 0cfd57444cba5f74598f7dfae0462670, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -16012,3 +16064,4 @@ SceneRoots:
   - {fileID: 97360212}
   - {fileID: 919252950}
   - {fileID: 101570455}
+  - {fileID: 1086710700}

@@ -1331,7 +1331,7 @@ MonoBehaviour:
   m_text: 'Hint: These are musical instruments. Look carefully at the letters.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2516,8 +2516,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choose...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2541,8 +2541,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5570,8 +5570,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choose...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5595,8 +5595,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11198,8 +11198,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choose...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11223,8 +11223,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12205,8 +12205,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choose...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12230,8 +12230,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13174,7 +13174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1882670122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14583,7 +14583,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2118384658778914729, guid: f9b38eaee0c970a4a923fa01b2ea6562, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -502
+      value: -559
       objectReference: {fileID: 0}
     - target: {fileID: 2402755648458898102, guid: f9b38eaee0c970a4a923fa01b2ea6562, type: 3}
       propertyPath: helpButton
@@ -14689,68 +14689,68 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Grammar Tip
 
-        
 
-        Use "can" for things someone is able
-        to do.
 
-        Example: Bane can sing.
+        Use "can" for things someone is able to do.
 
-        
+        Example:
+        Bane can sing.
 
-        Use "can''t"
-        or "cannot" for things someone is not able to do.
 
-        Example: Bane
-        can''t play the saxophone.
 
-        
+        Use "can''t" or "cannot" for things someone is
+        not able to do.
 
-        Word Help
+        Example: Bane can''t play the saxophone.
 
-        
 
-        nervous
-        = worried or afraid
 
-        suspicious = strange or not trustworthy
+        Word
+        Help
 
-        instrument
-        = something you play to make music
 
-        wiggle your ears = move your
-        ears quickly from side to side
 
-        stand on your hands = balance your
-        body upside down using your hands
+        nervous = worried or afraid
 
-        bake = to cook food such as bread,
-        cakes or cookies in an oven
+        suspicious = strange
+        or not trustworthy
 
-        sing = to make music with your voice
+        instrument = something you play to make music
 
-        tongue
-        = the soft part inside your mouth that helps you taste, eat and speak
+        wiggle
+        your ears = move your ears quickly from side to side
 
-        play
-        an instrument = to make music using an instrument
+        stand on your
+        hands = balance your body upside down using your hands
 
-        dance = to move
-        your body to music
+        bake = to
+        cook food such as bread, cakes or cookies in an oven
 
-        whistle = to make a high sound using your lips
+        sing = to make
+        music with your voice
 
-        juggle
-        = to keep several objects moving through the air without dropping them
+        tongue = the soft part inside your mouth that
+        helps you taste, eat and speak
 
-        climb
-        = to move up something such as a tree or ladder
+        play an instrument = to make music
+        using an instrument
 
-        balance = to stay
-        steady without falling
+        dance = to move your body to music
 
-        perform = to entertain people by singing,
-        dancing or acting
+        whistle
+        = to make a high sound using your lips
+
+        juggle = to keep several
+        objects moving through the air without dropping them
+
+        climb = to
+        move up something such as a tree or ladder
+
+        balance = to stay steady
+        without falling
+
+        perform = to entertain people by singing, dancing
+        or acting
 
         talent = a natural ability to do something well
 
@@ -14865,8 +14865,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choose...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
+  m_sharedMaterial: {fileID: 8114860532473945583, guid: 0c5df167dbcd31e47b3956228346cfe1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14890,8 +14890,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 19
+  m_fontSizeBase: 19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -1644,6 +1644,7 @@ GameObject:
   - component: {fileID: 770189365}
   - component: {fileID: 770189364}
   - component: {fileID: 770189363}
+  - component: {fileID: 770189366}
   m_Layer: 5
   m_Name: PlayPirateAudioButton
   m_TagString: Untagged
@@ -1715,9 +1716,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 107161473}
-        m_TargetAssemblyTypeName: PirateListeningManager, Assembly-CSharp
-        m_MethodName: PlayAudio
+      - m_Target: {fileID: 770189366}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: ToggleAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1765,6 +1766,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770189361}
   m_CullTransparentMesh: 1
+--- !u!114 &770189366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770189361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c10ac2d137c2d0547a2245b1c9f3c284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioController
+  audioSource: {fileID: 1823965717}
+  buttonText: {fileID: 1240213741}
 --- !u!1001 &790297936
 PrefabInstance:
   m_ObjectHideFlags: 0
