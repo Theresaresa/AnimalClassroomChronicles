@@ -17,12 +17,12 @@ public class AudioController : MonoBehaviour
         if (audioSource.isPlaying)
         {
             audioSource.Stop();
-            buttonText.text = "▶ Play Listening";
+            buttonText.text = "Play Listening";
         }
         else
         {
             audioSource.Play();
-            buttonText.text = "⏹ Stop Listening";
+            buttonText.text = "Stop Listening";
         }
     }
 }

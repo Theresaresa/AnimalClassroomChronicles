@@ -67,47 +67,41 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Grammar Tip
 
-    
 
     Present Simple: Use it for habits and facts.
 
     Signal
     words: every day, often, normally.
 
-    Example: Mrs Frogman teaches at the
-    Academy.
+    Example: Mrs Frogman teaches at the Academy.
 
-    
 
-    Present Progressive: Use it for things happening now.
+    Present
+    Progressive: Use it for things happening now.
 
-    Signal
-    words: right now, at the moment.
+    Signal words: right now, at
+    the moment.
 
-    Example: The detective is looking for
-    clues.
+    Example: The detective is looking for clues.
 
-    
 
-    Past Simple: Use it for finished actions in the past.
+    Past Simple:
+    Use it for finished actions in the past.
 
-    Signal
-    words: yesterday, last week, when she was a student.
+    Signal words: yesterday, last week,
+    when she was a student.
 
-    Example: Bane took
-    the sunglasses.
+    Example: Bane took the sunglasses.
 
-    
 
     Word Help
 
-    
 
-    clue = a piece of information
-    that helps solve a mystery
+    clue
+    = a piece of information that helps solve a mystery
 
-    suspect = a person who may have done something
-    wrong
+    suspect = a person who
+    may have done something wrong
 
     secret = something not everyone knows'
   m_isRightToLeft: 0
@@ -192,6 +186,7 @@ GameObject:
   - component: {fileID: 4004771345411248513}
   - component: {fileID: 6576290939403405198}
   - component: {fileID: 8001260852464176803}
+  - component: {fileID: 2402755648458898102}
   m_Layer: 5
   m_Name: HelpPanel
   m_TagString: Untagged
@@ -258,6 +253,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2402755648458898102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4639361497576785311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75b9a01abf1e1ca469ff97936a55bbf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HelpPanelManager
+  helpPanel: {fileID: 4639361497576785311}
+  helpButton: {fileID: 0}
 --- !u!1 &6437879642276313595
 GameObject:
   m_ObjectHideFlags: 0

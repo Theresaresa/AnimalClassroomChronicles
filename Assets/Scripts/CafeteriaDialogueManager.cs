@@ -19,7 +19,7 @@ public class CafeteriaDialogueManager : MonoBehaviour
             "Oh dear... you found my cafeteria.",
             "Are you investigating the missing Golden Speaking Ball?",
             "I saw someone rushing through here after class.",
-            "They were wearing a yellow cap and a black jacket.",
+            "They were wearing a purple coat. But I don't remember who it was right now.",
             "Before I tell you more, could you help me with a quick food survey?"
         };
 
