@@ -16,6 +16,12 @@ public class FinalEndingManager : MonoBehaviour
     {
         frogmanPortrait.sprite = arrestedSprite;
 
+        if (SoundManager.Instance != null)
+{
+    SoundManager.Instance.PlayHandcuffs();
+    SoundManager.Instance.PlayCertificateFanfare();
+}
+
         confessionPanel.SetActive(false);
         certificatePanel.SetActive(true);
 
