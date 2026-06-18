@@ -83,6 +83,7 @@ public class ClassroomWritingTask : MonoBehaviour
                 "Excellent detective work! You now understand the most important facts about the Golden Speaking Ball.";
 
             Invoke("OpenInvestigationPanel", 2f);
+            
         }
         else
         {
@@ -93,6 +94,10 @@ public class ClassroomWritingTask : MonoBehaviour
 
     void OpenInvestigationPanel()
     {
+
+        PlayerPrefs.SetInt("ClassroomProgress", 1);
+        PlayerPrefs.Save();
+
         goldenBallInfoPanel.SetActive(false);
         investigationPanel.SetActive(true);
     }
@@ -111,6 +116,9 @@ public class ClassroomWritingTask : MonoBehaviour
         {
             feedbackText.text = "Excellent detective work! You found an anonymous note behind the board.";
             continueButton.interactable = true;
+
+            PlayerPrefs.SetInt("ClassroomProgress", 2);
+            PlayerPrefs.Save();
         }
         else
         {
@@ -147,10 +155,13 @@ public class ClassroomWritingTask : MonoBehaviour
     }
 
     public void ContinueInvestigation()
-    {
-        investigationPanel.SetActive(false);
-        wordSearchPanel.SetActive(true);
-    }
+{
+    PlayerPrefs.SetInt("ClassroomProgress", 3);
+    PlayerPrefs.Save();
+
+    investigationPanel.SetActive(false);
+    wordSearchPanel.SetActive(true);
+}
 
     public void CheckWordSearchAnswer()
     {
@@ -165,6 +176,11 @@ public class ClassroomWritingTask : MonoBehaviour
 
             goToCafeteriaButton.gameObject.SetActive(true);
             goToCafeteriaButton.interactable = true;
+
+            PlayerPrefs.SetInt("ClassroomProgress", 4);
+            PlayerPrefs.SetInt("ClassroomBadge", 1);
+            PlayerPrefs.SetInt("MagnifyingGlassUnlocked", 1);
+            PlayerPrefs.Save();
         }
         else
         {
