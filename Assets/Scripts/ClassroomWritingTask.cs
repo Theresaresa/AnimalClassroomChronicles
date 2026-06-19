@@ -156,8 +156,7 @@ public class ClassroomWritingTask : MonoBehaviour
 
     public void ContinueInvestigation()
 {
-    PlayerPrefs.SetInt("ClassroomProgress", 3);
-    PlayerPrefs.Save();
+    
 
     investigationPanel.SetActive(false);
     wordSearchPanel.SetActive(true);
@@ -177,7 +176,7 @@ public class ClassroomWritingTask : MonoBehaviour
             goToCafeteriaButton.gameObject.SetActive(true);
             goToCafeteriaButton.interactable = true;
 
-            PlayerPrefs.SetInt("ClassroomProgress", 4);
+            PlayerPrefs.SetInt("ClassroomProgress", 3);
             PlayerPrefs.SetInt("ClassroomBadge", 1);
             PlayerPrefs.SetInt("MagnifyingGlassUnlocked", 1);
             PlayerPrefs.Save();
@@ -194,14 +193,17 @@ public class ClassroomWritingTask : MonoBehaviour
         hintText.gameObject.SetActive(true);
     }
 
-    public void GoToCafeteria()
-    {
-        PlayerPrefs.SetString("LastScene", "CafeteriaScene");
-        PlayerPrefs.SetInt("UnlockedChapter", Mathf.Max(PlayerPrefs.GetInt("UnlockedChapter", 1), 2));
-        PlayerPrefs.Save();
+   public void GoToCafeteria()
+{
+    PlayerPrefs.SetString("LastScene", "CafeteriaScene");
+    PlayerPrefs.SetInt("ClassroomProgress", 3);
+    PlayerPrefs.SetInt("ClassroomBadge", 1);
+    PlayerPrefs.SetInt("MagnifyingGlassUnlocked", 1);
+    PlayerPrefs.SetInt("UnlockedChapter", Mathf.Max(PlayerPrefs.GetInt("UnlockedChapter", 1), 2));
+    PlayerPrefs.Save();
 
-        SceneManager.LoadScene("CafeteriaScene");
-    }
+    SceneManager.LoadScene("CafeteriaScene");
+}
 
     string CleanAnswer(string answer)
     {

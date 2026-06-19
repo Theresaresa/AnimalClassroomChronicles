@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4984003755925072387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5302052917613595188}
+  - component: {fileID: 7997524661631514080}
+  m_Layer: 0
+  m_Name: NotebookManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5302052917613595188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4984003755925072387}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 480.58545, y: 415.85074, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7997524661631514080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4984003755925072387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bd580a809f971468fbcff2f824fd81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NotebookManager
+  notebookPanel: {fileID: 0}
+  progressText: {fileID: 0}
+  badgeText: {fileID: 0}
+  rewardText: {fileID: 0}
+  classroomBadgeSlot: {fileID: 0}
+  cafeteriaBadgeSlot: {fileID: 0}
+  costumeBadgeSlot: {fileID: 0}
+  harborBadgeSlot: {fileID: 0}
+  libraryBadgeSlot: {fileID: 0}
+  lockedBadgeSprite: {fileID: 21300000, guid: b045cfd06765ea24d9f60ae8b764cb13, type: 3}
+  classroomBadgeSprite: {fileID: 21300000, guid: 1f14aff3a4db9484a99798dd49073f9a, type: 3}
+  cafeteriaBadgeSprite: {fileID: 21300000, guid: 8d461a3cc565f1d4699d1d7f59a25a47, type: 3}
+  costumeBadgeSprite: {fileID: 21300000, guid: 1f1ef5c79f7044b4cbfee8b5cc7d685d, type: 3}
+  harborBadgeSprite: {fileID: 21300000, guid: ff3fe9e6c492f25489d252fc693ef430, type: 3}
+  libraryBadgeSprite: {fileID: 21300000, guid: 237f6a391b65a3040a7b1fddf3ff0cc3, type: 3}
+  classroomRewardSlot: {fileID: 0}
+  cafeteriaRewardSlot: {fileID: 0}
+  costumeRewardSlot: {fileID: 0}
+  harborRewardSlot: {fileID: 0}
+  libraryRewardSlot: {fileID: 0}
+  lockedRewardSprite: {fileID: 21300000, guid: 792c8acbbcace0e489a0587c5a472bd6, type: 3}
+  magnifyingGlassSprite: {fileID: 21300000, guid: 68a534eb01f253d4996871ae6504cddc, type: 3}
+  appleSprite: {fileID: 21300000, guid: a1de879ad26573b40bd12e231d99f493, type: 3}
+  detectiveHatSprite: {fileID: 21300000, guid: ca9a0ca00ffed854b9689c0a4489735a, type: 3}
+  compassSprite: {fileID: 21300000, guid: b2842466c9f01fe48a1a28748a5ef335, type: 3}
+  goldenSpeakingBallSprite: {fileID: 21300000, guid: ed5942a66d4fcd64494e48ac50e9acb9, type: 3}
+  chapterTitle: 'Chapter 1: Classroom'

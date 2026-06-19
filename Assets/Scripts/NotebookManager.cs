@@ -4,11 +4,19 @@ using UnityEngine.UI;
 
 public class NotebookManager : MonoBehaviour
 {
+    [Header("Notebook UI")]
     public GameObject notebookPanel;
-
     public TextMeshProUGUI progressText;
     public TextMeshProUGUI badgeText;
     public TextMeshProUGUI rewardText;
+
+    [Header("Current Chapter")]
+    public string chapterName = "Chapter 1: Classroom";
+    public string progressKey = "ClassroomProgress";
+
+    public string mission1 = "Mission 1";
+    public string mission2 = "Mission 2";
+    public string mission3 = "Mission 3";
 
     [Header("Badge Slots")]
     public Image classroomBadgeSlot;
@@ -38,8 +46,6 @@ public class NotebookManager : MonoBehaviour
     public Sprite compassSprite;
     public Sprite goldenSpeakingBallSprite;
 
-    public string chapterTitle = "Chapter 1: Classroom";
-
     public void OpenNotebook()
     {
         notebookPanel.SetActive(true);
@@ -51,34 +57,51 @@ public class NotebookManager : MonoBehaviour
         notebookPanel.SetActive(false);
     }
 
-    public void UpdateNotebook()
+    void UpdateNotebook()
     {
-        int progress = PlayerPrefs.GetInt("ClassroomProgress", 0);
+        int progress = PlayerPrefs.GetInt(progressKey, 0);
 
         progressText.text =
-            chapterTitle + "\n\n" +
-            Mark(progress >= 1) + " Golden Ball Information\n" +
-            Mark(progress >= 2) + " Classroom Investigation\n" +
-            Mark(progress >= 3) + " Anonymous Note\n" +
-            Mark(progress >= 4) + " Word Search";
+            chapterName + "\n\n" +
+            Mark(progress >= 1) + mission1 + "\n" +
+            Mark(progress >= 2) + mission2 + "\n" +
+            Mark(progress >= 3) + mission3;
 
         if (badgeText != null)
             badgeText.text = "Chapter Badges";
 
         if (rewardText != null)
-            rewardText.text = "Inventory Rewards";
+            rewardText.text = "Rewards";
 
-        classroomBadgeSlot.sprite = PlayerPrefs.GetInt("ClassroomBadge", 0) == 1 ? classroomBadgeSprite : lockedBadgeSprite;
-        cafeteriaBadgeSlot.sprite = PlayerPrefs.GetInt("CafeteriaBadge", 0) == 1 ? cafeteriaBadgeSprite : lockedBadgeSprite;
-        costumeBadgeSlot.sprite = PlayerPrefs.GetInt("CostumeBadge", 0) == 1 ? costumeBadgeSprite : lockedBadgeSprite;
-        harborBadgeSlot.sprite = PlayerPrefs.GetInt("HarborBadge", 0) == 1 ? harborBadgeSprite : lockedBadgeSprite;
-        libraryBadgeSlot.sprite = PlayerPrefs.GetInt("LibraryBadge", 0) == 1 ? libraryBadgeSprite : lockedBadgeSprite;
+        classroomBadgeSlot.sprite =
+            PlayerPrefs.GetInt("ClassroomBadge", 0) == 1 ? classroomBadgeSprite : lockedBadgeSprite;
 
-        classroomRewardSlot.sprite = PlayerPrefs.GetInt("MagnifyingGlassUnlocked", 0) == 1 ? magnifyingGlassSprite : lockedRewardSprite;
-        cafeteriaRewardSlot.sprite = PlayerPrefs.GetInt("AppleUnlocked", 0) == 1 ? appleSprite : lockedRewardSprite;
-        costumeRewardSlot.sprite = PlayerPrefs.GetInt("DetectiveHatUnlocked", 0) == 1 ? detectiveHatSprite : lockedRewardSprite;
-        harborRewardSlot.sprite = PlayerPrefs.GetInt("CompassUnlocked", 0) == 1 ? compassSprite : lockedRewardSprite;
-        libraryRewardSlot.sprite = PlayerPrefs.GetInt("GoldenSpeakingBallUnlocked", 0) == 1 ? goldenSpeakingBallSprite : lockedRewardSprite;
+        cafeteriaBadgeSlot.sprite =
+            PlayerPrefs.GetInt("CafeteriaBadge", 0) == 1 ? cafeteriaBadgeSprite : lockedBadgeSprite;
+
+        costumeBadgeSlot.sprite =
+            PlayerPrefs.GetInt("CostumeBadge", 0) == 1 ? costumeBadgeSprite : lockedBadgeSprite;
+
+        harborBadgeSlot.sprite =
+            PlayerPrefs.GetInt("HarborBadge", 0) == 1 ? harborBadgeSprite : lockedBadgeSprite;
+
+        libraryBadgeSlot.sprite =
+            PlayerPrefs.GetInt("LibraryBadge", 0) == 1 ? libraryBadgeSprite : lockedBadgeSprite;
+
+        classroomRewardSlot.sprite =
+            PlayerPrefs.GetInt("MagnifyingGlassUnlocked", 0) == 1 ? magnifyingGlassSprite : lockedRewardSprite;
+
+        cafeteriaRewardSlot.sprite =
+            PlayerPrefs.GetInt("AppleUnlocked", 0) == 1 ? appleSprite : lockedRewardSprite;
+
+        costumeRewardSlot.sprite =
+            PlayerPrefs.GetInt("DetectiveHatUnlocked", 0) == 1 ? detectiveHatSprite : lockedRewardSprite;
+
+        harborRewardSlot.sprite =
+            PlayerPrefs.GetInt("CompassUnlocked", 0) == 1 ? compassSprite : lockedRewardSprite;
+
+        libraryRewardSlot.sprite =
+            PlayerPrefs.GetInt("GoldenSpeakingBallUnlocked", 0) == 1 ? goldenSpeakingBallSprite : lockedRewardSprite;
     }
 
     string Mark(bool done)

@@ -46,12 +46,23 @@ public class Chapter3EndingDialogueManager : MonoBehaviour
         }
     }
 
-    void GoToHarbor()
-    {
-        PlayerPrefs.SetString("LastScene", "HarborScene");
-PlayerPrefs.SetInt("UnlockedChapter", Mathf.Max(PlayerPrefs.GetInt("UnlockedChapter", 1), 4));
-PlayerPrefs.Save();
+   void GoToHarbor()
+{
+    nextButton.interactable = false;
 
-SceneManager.LoadScene("HarborScene");
-    }
+    PlayerPrefs.SetString("LastScene", "HarborScene");
+
+    PlayerPrefs.SetInt("CostumeProgress", 4);
+    PlayerPrefs.SetInt("CostumeBadge", 1);
+    PlayerPrefs.SetInt("DetectiveHatUnlocked", 1);
+
+    PlayerPrefs.SetInt(
+        "UnlockedChapter",
+        Mathf.Max(PlayerPrefs.GetInt("UnlockedChapter", 1), 4)
+    );
+
+    PlayerPrefs.Save();
+
+    SceneManager.LoadScene("HarborScene");
+}
 }
