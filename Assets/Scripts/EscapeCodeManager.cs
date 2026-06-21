@@ -58,6 +58,12 @@ public class EscapeCodeManager : MonoBehaviour
             else
             {
                 feedbackText.text = "Great! The door unlocked. Ms Ladybug remembers she saw Mr Whinnyham. He was upset. She tells you to go to his shop and to bring him some food. Maybe he knows something.";
+                ProgressHelper.CompleteChapter(
+                    "CafeteriaProgress",
+                    "CafeteriaBadge",
+                    "AppleUnlocked",
+                    3
+                );
                 goToCostumeShopButton.gameObject.SetActive(true);
             }
         }

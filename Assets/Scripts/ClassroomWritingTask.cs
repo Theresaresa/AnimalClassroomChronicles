@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class ClassroomWritingTask : MonoBehaviour
 {
@@ -103,56 +104,101 @@ public class ClassroomWritingTask : MonoBehaviour
     }
 
     public void CheckAnswers()
+{
+    int goodSentences = 0;
+    List<string> usedObjects = new List<string>();
+
+    if (IsGoodSentence(sentence1.text, usedObjects)) goodSentences++;
+    if (IsGoodSentence(sentence2.text, usedObjects)) goodSentences++;
+    if (IsGoodSentence(sentence3.text, usedObjects)) goodSentences++;
+    if (IsGoodSentence(sentence4.text, usedObjects)) goodSentences++;
+    if (IsGoodSentence(sentence5.text, usedObjects)) goodSentences++;
+
+    if (goodSentences >= 3)
     {
-        int goodSentences = 0;
+        feedbackText.text = "Excellent detective work! You found an anonymous note behind the board.";
+        continueButton.interactable = true;
 
-        if (IsGoodSentence(sentence1.text)) goodSentences++;
-        if (IsGoodSentence(sentence2.text)) goodSentences++;
-        if (IsGoodSentence(sentence3.text)) goodSentences++;
-        if (IsGoodSentence(sentence4.text)) goodSentences++;
-        if (IsGoodSentence(sentence5.text)) goodSentences++;
+        PlayerPrefs.SetInt("ClassroomProgress", 2);
+        PlayerPrefs.Save();
+    }
+    else
+    {
+        feedbackText.text = "You found " + goodSentences +
+            " good clue(s). Use there is / there are and write about different classroom objects.";
+        continueButton.interactable = false;
+    }
+}
 
-        if (goodSentences >= 3)
+    bool IsGoodSentence(string sentence, List<string> usedObjects)
+{
+    sentence = sentence.ToLower().Trim();
+
+    string[,] singularWords =
+    {
+        { "desk", "desk" },
+        { "chair", "chair" },
+        { "board", "board" },
+        { "book", "book" },
+        { "clock", "clock" },
+        { "window", "window" },
+        { "door", "door" },
+        { "pencil", "pencil" },
+        { "table", "table" },
+        { "notebook", "notebook" },
+        { "computer", "computer" },
+        { "speaker", "speaker" },
+        { "sound system", "sound system" }
+    };
+
+    string[,] pluralWords =
+    {
+        { "desks", "desk" },
+        { "chairs", "chair" },
+        { "books", "book" },
+        { "windows", "window" },
+        { "doors", "door" },
+        { "pencils", "pencil" },
+        { "tables", "table" },
+        { "notebooks", "notebook" },
+        { "computers", "computer" },
+        { "speakers", "speaker" }
+    };
+
+    if (sentence.StartsWith("there is "))
+    {
+        return CheckWordList(sentence, singularWords, usedObjects);
+    }
+
+    if (sentence.StartsWith("there are "))
+    {
+        return CheckWordList(sentence, pluralWords, usedObjects);
+    }
+
+    return false;
+}
+
+bool CheckWordList(string sentence, string[,] wordList, List<string> usedObjects)
+{
+    for (int i = 0; i < wordList.GetLength(0); i++)
+    {
+        string wordInSentence = wordList[i, 0];
+        string baseWord = wordList[i, 1];
+
+        if (sentence.Contains(wordInSentence))
         {
-            feedbackText.text = "Excellent detective work! You found an anonymous note behind the board.";
-            continueButton.interactable = true;
+            if (usedObjects.Contains(baseWord))
+            {
+                return false;
+            }
 
-            PlayerPrefs.SetInt("ClassroomProgress", 2);
-            PlayerPrefs.Save();
-        }
-        else
-        {
-            feedbackText.text = "You found " + goodSentences +
-                " good clue(s). Write more classroom observations using there is / there are.";
-            continueButton.interactable = false;
+            usedObjects.Add(baseWord);
+            return true;
         }
     }
 
-    bool IsGoodSentence(string sentence)
-    {
-        sentence = sentence.ToLower().Trim();
-
-        bool startsCorrectly =
-            sentence.StartsWith("there is ") ||
-            sentence.StartsWith("there are ");
-
-        string[] classroomWords =
-        {
-            "desk", "desks", "chair", "chairs", "board",
-            "book", "books", "clock", "window", "windows",
-            "door", "doors", "pencil", "pencils", "table", "tables",
-            "notebook", "notebooks", "computer", "computers",
-            "speaker", "speakers", "sound system"
-        };
-
-        foreach (string word in classroomWords)
-        {
-            if (sentence.Contains(word))
-                return startsCorrectly;
-        }
-
-        return false;
-    }
+    return false;
+}
 
     public void ContinueInvestigation()
 {
@@ -193,13 +239,15 @@ public class ClassroomWritingTask : MonoBehaviour
         hintText.gameObject.SetActive(true);
     }
 
-   public void GoToCafeteria()
+  public void GoToCafeteria()
 {
     PlayerPrefs.SetString("LastScene", "CafeteriaScene");
-    PlayerPrefs.SetInt("ClassroomProgress", 3);
-    PlayerPrefs.SetInt("ClassroomBadge", 1);
-    PlayerPrefs.SetInt("MagnifyingGlassUnlocked", 1);
-    PlayerPrefs.SetInt("UnlockedChapter", Mathf.Max(PlayerPrefs.GetInt("UnlockedChapter", 1), 2));
+
+    PlayerPrefs.SetInt(
+        "UnlockedChapter",
+        Mathf.Max(PlayerPrefs.GetInt("UnlockedChapter", 1), 2)
+    );
+
     PlayerPrefs.Save();
 
     SceneManager.LoadScene("CafeteriaScene");

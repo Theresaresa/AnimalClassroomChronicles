@@ -36,7 +36,7 @@ public class DetectiveNotesManager : MonoBehaviour
         {
             feedbackText.text =
                 "Excellent detective work! The notes helped you think clearly. Have a closer look at the bookshelves.";
-
+            ProgressHelper.SetMissionProgress("LibraryProgress", 2);
             Invoke("OpenSecretWordPanel", 2f);
         }
         else

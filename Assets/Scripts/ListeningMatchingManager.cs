@@ -55,6 +55,7 @@ public class ListeningMatchingManager : MonoBehaviour
         if (redSunglassesCorrect && blueCapCorrect && blackJacketCorrect)
         {
             feedbackText.text = "Excellent listening! All prices are correct.";
+            ProgressHelper.SetMissionProgress("CostumeProgress", 2);
 
             if (nextTaskPanel != null)
             {

@@ -84,6 +84,7 @@ public class StorageCountingManager : MonoBehaviour
             else
             {
                 feedbackText.text = "Excellent work! You counted all the food.";
+                ProgressHelper.SetMissionProgress("CafeteriaProgress", 2);
                 Invoke("GoToLockedStorage", 2f);
             }
         }

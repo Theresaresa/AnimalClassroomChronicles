@@ -46,6 +46,7 @@ public GameObject listeningTaskPanel;
         {
             feedbackText.text =
                 "Excellent detective work! Mr Whinnyham remembers the missing clothes now.";
+                ProgressHelper.SetMissionProgress("CostumeProgress", 1);
                 Invoke("OpenListeningTask", 2f);
         }
         else

@@ -52,9 +52,14 @@ public class Chapter3EndingDialogueManager : MonoBehaviour
 
     PlayerPrefs.SetString("LastScene", "HarborScene");
 
-    PlayerPrefs.SetInt("CostumeProgress", 4);
-    PlayerPrefs.SetInt("CostumeBadge", 1);
-    PlayerPrefs.SetInt("DetectiveHatUnlocked", 1);
+    ProgressHelper.CompleteChapter(
+    "CostumeProgress",
+    "CostumeBadge",
+    "DetectiveHatUnlocked",
+    4
+);
+
+    
 
     PlayerPrefs.SetInt(
         "UnlockedChapter",

@@ -42,6 +42,7 @@ public class PirateReadingManager : MonoBehaviour
         if (allCorrect)
         {
             feedbackText.text = "Great reading! Bane trusts you more now.";
+            ProgressHelper.SetMissionProgress("HarborProgress", 2);
             Invoke("OpenInstrumentPuzzle", 2f);
         }
         else

@@ -26,6 +26,12 @@ public class FinalAccusationManager : MonoBehaviour
         {
             feedbackText.text =
                 "Correct! You solved the mystery.";
+                ProgressHelper.CompleteChapter(
+                    "LibraryProgress",
+                    "LibraryBadge",
+                    "GoldenSpeakingBallUnlocked",
+                    5
+                );
 
             Invoke("OpenConfession", 2f);
         }

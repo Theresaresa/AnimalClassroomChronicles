@@ -94,6 +94,7 @@ public class LunchSurveyManager : MonoBehaviour
             else
             {
                 feedbackText.text = "Great job!\nLet's investigate the storage room.";
+                ProgressHelper.SetMissionProgress("CafeteriaProgress", 1);
 
                 if (goToStorageButton != null)
                 {

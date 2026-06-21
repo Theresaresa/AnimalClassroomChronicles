@@ -28,6 +28,7 @@ public class PirateListeningManager : MonoBehaviour
         if (answer == "bane")
         {
             feedbackText.text = "Excellent detective work! You found the correct pirate.";
+            ProgressHelper.SetMissionProgress("HarborProgress", 1);
             Invoke("GoToBaneScene", 2f);
         }
         else

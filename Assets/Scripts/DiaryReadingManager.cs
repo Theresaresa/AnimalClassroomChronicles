@@ -42,6 +42,7 @@ public class DiaryReadingManager : MonoBehaviour
         if (allCorrect)
         {
             feedbackText.text = "Excellent reading! This diary gives you an important clue.";
+            ProgressHelper.SetMissionProgress("LibraryProgress", 1);
             Invoke("OpenTimelinePanel", 2f);
         }
         else

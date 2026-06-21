@@ -90,6 +90,12 @@ public class CanCantManager : MonoBehaviour
             else
             {
                 feedbackText.text = "Great! Bane feels much calmer now.";
+                ProgressHelper.CompleteChapter(
+                    "HarborProgress",
+                    "HarborBadge",
+                    "CompassUnlocked",
+                    5
+                );
                 Invoke("OpenFinalBaneClue", 2f);
             }
         }
