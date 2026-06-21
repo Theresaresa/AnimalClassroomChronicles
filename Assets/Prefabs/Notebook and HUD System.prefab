@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1741084149507695806, guid: 771d0be0b4a2efd4eaab0763c8691a5c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -183
+      value: -184
       objectReference: {fileID: 0}
     - target: {fileID: 1741084149507695806, guid: 771d0be0b4a2efd4eaab0763c8691a5c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -90,7 +90,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4003960745640340928, guid: 771d0be0b4a2efd4eaab0763c8691a5c, type: 3}
       propertyPath: m_Name
-      value: HUDPanel Variant
+      value: Notebook and HUD System
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419781103935247953, guid: 771d0be0b4a2efd4eaab0763c8691a5c, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419781103935247953, guid: 771d0be0b4a2efd4eaab0763c8691a5c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419781103935247953, guid: 771d0be0b4a2efd4eaab0763c8691a5c, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730327875471422133, guid: 771d0be0b4a2efd4eaab0763c8691a5c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730327875471422133, guid: 771d0be0b4a2efd4eaab0763c8691a5c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 142
+      objectReference: {fileID: 0}
+    - target: {fileID: 5730327875471422133, guid: 771d0be0b4a2efd4eaab0763c8691a5c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -171
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797167686274865645, guid: 771d0be0b4a2efd4eaab0763c8691a5c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 124
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797167686274865645, guid: 771d0be0b4a2efd4eaab0763c8691a5c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -259
+      objectReference: {fileID: 0}
+    - target: {fileID: 6823809542955628961, guid: 771d0be0b4a2efd4eaab0763c8691a5c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

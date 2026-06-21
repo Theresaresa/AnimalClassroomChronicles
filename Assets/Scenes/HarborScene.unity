@@ -3633,6 +3633,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 675792611}
     - target: {fileID: 5547489248546911442, guid: 38928716a6ef707489ac556b100431b8, type: 3}
+      propertyPath: chapterName
+      value: 'Chapter 4: Harbor'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5547489248546911442, guid: 38928716a6ef707489ac556b100431b8, type: 3}
       propertyPath: progressText
       value: 
       objectReference: {fileID: 675792613}
